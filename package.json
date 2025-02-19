@@ -1,0 +1,35 @@
+{
+  "name": "academyclup_papilika",
+  "version": "1.0.0",
+  "description": "Html5,Css3,JS,TS,ES5, jQuery, Live-server,Ajax,json-server",
+  "main": "dist/es5/index.js",
+  "scripts": {
+    "build": "tsc && babel dist/src --out-dir dist/es5 --presets=@babel/preset-env",
+    "start": "node dist/es5/index.js",
+    "dev": "tsc --watch",
+    "babel:watch": "babel dist/src --out-dir dist/es5 --presets=@babel/preset-env --watch",
+    "json-server": "json-server --watch db.json --port 3000",
+    "start-server": "live-server --port=8888 --no-browser --open=index.html",
+    "dev:start": "concurrently \"tsc --watch\" \"babel dist/src --out-dir dist/es5 --presets=@babel/preset-env --watch\" \"json-server --watch db.json --port 3000\" \"npm run start-server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Html5,Css3,JS,TS,ES5, jQuery, Live-server,Ajax,json-server"
+  ],
+  "author": "MSc Hamit Mızrak",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "json-server": "^1.0.0-beta.3",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@types/jquery": "^3.5.32",
+    "concurrently": "^7.6.0",
+    "live-server": "^1.2.2",
+    "typescript": "^5.4.3"
+  }
+}
