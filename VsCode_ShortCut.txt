@@ -1,1 +1,2 @@
 Ctrl+k : Comment
+Shift+Alt+f : Beautify
