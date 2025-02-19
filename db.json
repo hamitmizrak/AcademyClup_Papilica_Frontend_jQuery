@@ -1,12 +1,28 @@
 {
-    "todos": [
-      {
-        "id": "8fc9",
-        "text": "Keman Öğren",
-        "completed": false,
-        "priority": "High",
-        "dueDate": "2025-02-12",
-        "category": "Personal"
-      }
-    ]
-  }
+  "todos": [
+    {
+      "id": "8fc9",
+      "text": "Keman Öğren",
+      "completed": false,
+      "priority": "High",
+      "dueDate": "2025-02-12",
+      "category": "Personal"
+    },
+    {
+      "id": "e07f",
+      "text": "Ts",
+      "completed": false,
+      "priority": "Low",
+      "dueDate": "2025-02-15",
+      "category": "Work"
+    },
+    {
+      "id": "6e2a",
+      "text": "Kestane al",
+      "completed": false,
+      "priority": "High",
+      "dueDate": "2025-02-23",
+      "category": "Shopping"
+    }
+  ]
+}
