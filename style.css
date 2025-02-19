@@ -1,209 +1,220 @@
 /* Genel Stil */
 /* Sayfanın genel yazı tipi, arka plan rengi, metin rengi ve hizalaması belirleniyor */
 
-:root{
-    --body_background_color:#1e1e1e;
-    --body_color:white;
+:root {
+  --body_background_color: #1e1e1e;
+  --body_color: white;
 }
 
-*{
-    padding: 0;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 15px;
+html {
+  font-size: 15px;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background:var(--body_background_color) ; /* Koyu gri arka plan */
-    color:var(--body_color) ; /* Beyaz metin */
-    text-align: center; /* Metinleri ortalar */
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", sans-serif;
+  background: var(--body_background_color); /* Koyu gri arka plan */
+  color: var(--body_color); /* Beyaz metin */
+  text-align: center; /* Metinleri ortalar */
+  margin: 0;
+  padding: 0;
+}
+
+#parag_id {
+  text-align: justify;
+  padding: 2rem 0.5rem;
+}
+
+#parag_id:hover {
+  transition: 3s all;
+  text-decoration: line-through;
 }
 
 /* Ana Container */
 /* Görev listesinin ana kutusunu (container'ı) stillendiriyor */
 .todo-container {
-    width: 27rem; /* Sabit genişlik */
-    margin: 3.2rem auto; /* Sayfa ortasına hizalanıyor */
-    background: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz arka plan */
-    backdrop-filter: blur(10px); /* Arka planı bulanıklaştırma efekti */
-    padding: 20px;
-    border-radius: 12px; /* Köşeleri yuvarlatma */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Hafif parlak gölge */
+  width: 27rem; /* Sabit genişlik */
+  margin: 3.2rem auto; /* Sayfa ortasına hizalanıyor */
+  background: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz arka plan */
+  backdrop-filter: blur(10px); /* Arka planı bulanıklaştırma efekti */
+  padding: 20px;
+  border-radius: 12px; /* Köşeleri yuvarlatma */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Hafif parlak gölge */
 }
 
 /* Başlık */
 /* Uygulamanın başlığını biçimlendiriyor */
 .title {
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Hafif beyaz gölge efekti */
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Hafif beyaz gölge efekti */
 }
 
 /* Input ve Ekle Butonu */
 /* Kullanıcıdan görev girişini alacak form elemanlarını biçimlendirir */
 .todo-input {
-    display: flex;
-    flex-direction: column; /* Elemanları dikey hizalar */
-    gap: 10px; /* Elemanlar arasındaki boşluk */
-    padding: 10px;
+  display: flex;
+  flex-direction: column; /* Elemanları dikey hizalar */
+  gap: 10px; /* Elemanlar arasındaki boşluk */
+  padding: 10px;
 }
 
 /* Giriş kutularının ve seçim alanlarının stillendirilmesi */
-.todo-input input, 
+.todo-input input,
 .todo-input select {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2); /* Şeffaf beyaz arka plan */
-    color: white;
-    width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2); /* Şeffaf beyaz arka plan */
+  color: white;
+  width: 100%;
 }
 
 /* Placeholder yazılarının rengini açarak daha belirgin hale getiriyor */
 .todo-input input::placeholder {
-    color: #ddd;
+  color: #ddd;
 }
 
 /* Seçim kutularını stillendirir */
 .todo-input select {
-    background: white;
-    color: black;
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
+  background: white;
+  color: black;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
 }
 
 /* Görev ekleme butonu stillendirme */
 .todo-input button {
-    background: #007bff; /* Mavi arka plan */
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 10px;
-    cursor: pointer; /* Üzerine gelindiğinde el simgesi */
-    border-radius: 8px;
-    transition: 0.3s; /* Hover efekti için geçiş süresi */
+  background: #007bff; /* Mavi arka plan */
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer; /* Üzerine gelindiğinde el simgesi */
+  border-radius: 8px;
+  transition: 0.3s; /* Hover efekti için geçiş süresi */
 }
 
 /* Görev ekleme butonunun hover (üzerine gelindiğinde) efekti */
 .todo-input button:hover {
-    background: #0056b3; /* Daha koyu mavi */
+  background: #0056b3; /* Daha koyu mavi */
 }
 
 /* Görev Listesi */
 /* Yapılacaklar listesinin (ul) stilini ayarlar */
 #todo-list {
-    list-style: none; /* Liste işaretlerini kaldırır */
-    padding: 0;
-    margin-top: 10px;
+  list-style: none; /* Liste işaretlerini kaldırır */
+  padding: 0;
+  margin-top: 10px;
 }
 
 /* Bireysel görev öğelerinin (li) biçimlendirilmesi */
 .todo-item {
-    display: flex;
-    align-items: center; /* Elemanları dikey ortalar */
-    justify-content: space-between; /* Sağ ve sola yayar */
-    background: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz arka plan */
-    padding: 12px;
-    margin: 5px 0;
-    border-radius: 8px;
-    border: none;
-    color: white;
+  display: flex;
+  align-items: center; /* Elemanları dikey ortalar */
+  justify-content: space-between; /* Sağ ve sola yayar */
+  background: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz arka plan */
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: none;
+  color: white;
 }
 
 /* Görev tamamlama kutusunun boyutunu büyütme */
 .todo-item input[type="checkbox"] {
-    transform: scale(1.2); /* Checkbox boyutunu büyütür */
-    cursor: pointer;
+  transform: scale(1.2); /* Checkbox boyutunu büyütür */
+  cursor: pointer;
 }
 
 /* Tamamlanan görevlerin üstü çizilir ve renk değiştirir */
 .todo-item .checked {
-    text-decoration: line-through; /* Üzeri çizili */
-    color: #bbb; /* Açık gri */
+  text-decoration: line-through; /* Üzeri çizili */
+  color: #bbb; /* Açık gri */
 }
 
 /* Filtreleme Bölümü */
 .filter-section {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Filtre seçim kutusunun biçimlendirilmesi */
 .filter-section select {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    background: white;
-    color: black;
-    width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  width: 100%;
 }
 
 /* Düzenle ve Sil Butonları */
 /* Görev düzenleme ve silme butonlarının varsayılan görünümü */
-.edit-btn, .delete-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 5px;
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 /* Düzenleme butonunun mavi renk alması */
 .edit-btn {
-    color: #007bff;
+  color: #007bff;
 }
 
 /* Düzenleme butonunun hover efekti */
 .edit-btn:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 /* Silme butonunun kırmızı renk alması */
 .delete-btn {
-    color: red;
+  color: red;
 }
 
 /* Silme butonunun hover efekti */
 .delete-btn:hover {
-    color: darkred;
+  color: darkred;
 }
 
 /* Footer */
 /* Alt bilgi (footer) stil ayarları */
 .todo-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
 }
 
 /* Tamamlanan görevlerin durum göstergesi */
 #task-status {
-    background: rgba(255, 255, 0, 0.2); /* Hafif sarı arka plan */
-    padding: 5px;
-    border-radius: 4px;
-    color: white;
+  background: rgba(255, 255, 0, 0.2); /* Hafif sarı arka plan */
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
 }
 
 /* Tamamlanan görevleri silme butonu */
 #remove-checked {
-    background: #dc3545; /* Kırmızı */
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
+  background: #dc3545; /* Kırmızı */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 /* Tamamlanan görevleri silme butonunun hover efekti */
 #remove-checked:hover {
-    background: #c82333; /* Daha koyu kırmızı */
+  background: #c82333; /* Daha koyu kırmızı */
 }
