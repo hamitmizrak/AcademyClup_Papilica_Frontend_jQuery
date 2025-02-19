@@ -1,0 +1,12 @@
+{
+    "todos": [
+      {
+        "id": "8fc9",
+        "text": "Keman Öğren",
+        "completed": false,
+        "priority": "High",
+        "dueDate": "2025-02-12",
+        "category": "Personal"
+      }
+    ]
+  }
